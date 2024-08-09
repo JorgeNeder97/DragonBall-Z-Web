@@ -1,0 +1,79 @@
+:root {
+    --font-size-small: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-subheading: 1.25rem;
+    --font-size-heading: 1.5rem;
+    --font-size-large-heading: 2rem;
+}
+
+.mainContainer {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80vh;
+    padding-bottom: 30px;
+}
+
+.link {
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-family: 'Russo One', 'sans-serif';
+    font-size: var(--font-size-heading);
+    text-decoration: none;
+    color: #FFF;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, #ff0000, #FFD700, rgb(251, 255, 20), rgb(255, 15, 15));
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.link:hover::after {
+    background-position: 100%;
+    filter: blur(15px);
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, #FFD700, #FFD700, rgb(255, 181, 20), rgb(255, 15, 15));
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.link:hover::before {
+    background-position: 100%;
+}
+
+.link:hover {
+    letter-spacing: 1px;
+    padding: 10px 34px;
+}

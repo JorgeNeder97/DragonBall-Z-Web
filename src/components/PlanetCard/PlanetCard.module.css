@@ -1,0 +1,51 @@
+:root {
+    --font-size-small: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-subheading: 1.25rem;
+    --font-size-heading: 1.5rem;
+    --font-size-large-heading: 2rem;
+}
+
+.mainContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: flex-start;
+    gap: 30px;
+    background: linear-gradient(245deg, #06205E, #021541, #000a20);
+    padding: 0 30px;
+    color: #FFF;
+    font-family: 'Russo One', 'sans-serif';
+    border-radius: 5px;
+}
+
+.planetName {
+    font-size: var(--font-size-large-heading);
+    text-shadow:
+        1.5px 1.5px 0 black,
+        -1.5px -1.5px 0 black,
+        1.5px -1.5px 0 black,
+        -1.5px 1.5px 0 black;
+    text-align: center;
+    margin-bottom: 0;
+    background: linear-gradient(to bottom, #0b3518, #215745, #0b3518);
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    letter-spacing: 1px;
+}
+
+.planetImage {
+    width: 400px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.planetIsDestroyed {
+    font-size: var(--font-size-subheading);
+}
+
+.planetDescription {
+    font-size: var(--font-size-base);
+    line-height: 50px;
+    margin-top: 30px;
+}

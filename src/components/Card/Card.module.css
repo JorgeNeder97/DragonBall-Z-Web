@@ -20,7 +20,7 @@ a {
     gap: 10px;
     padding: 10px;
     background: radial-gradient(circle, #3895e6, #043b95);
-    /* cursor: url('/pointer.png'), auto; */
+    transition: .3s all ease;
 }
 
 .mainContainer:hover .charImage {
@@ -31,6 +31,10 @@ a {
 .mainContainer:not(:hover) .charImage {
     height: 300px;
     transition: .3s all ease;
+}
+
+.mainContainer:hover {
+    box-shadow: 0px 0px 35px #f3a830;
 }
 
 .charName {

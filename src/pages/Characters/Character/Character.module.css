@@ -6,6 +6,10 @@
     --font-size-large-heading: 2rem;
 }
 
+.audio {
+    display: none;
+}
+
 .mainContainer {
     width: 100%;
     min-height: 50vh;
@@ -29,7 +33,7 @@
         "PAT PAT";
     align-items: flex-start;
     justify-items: center;
-    padding: 50px 5px;
+    padding: 50px 25px;
     background: radial-gradient(circle, #d78f19, #ffba4a);
     border-radius: 5px;
 }
@@ -67,8 +71,20 @@
     grid-area: PAT;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
+
+    .planetTitulo {
+        font-family: 'Russo One', 'sans-serif';
+        color: #FFF;
+        text-shadow:
+            1.5px 1.5px 0 black,
+            -1.5px -1.5px 0 black,
+            1.5px -1.5px 0 black,
+            -1.5px 1.5px 0 black;
+        font-size: var(--font-size-large-heading);
+        text-align: center;
+    }
 }
 
 .transformationsContainer {
@@ -77,6 +93,7 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    margin-top: 30px;
 
     .transformationsTitulo {
         font-family: 'Russo One', 'sans-serif';

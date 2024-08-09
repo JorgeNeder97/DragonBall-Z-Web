@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import { Card } from "../../../components/Card/Card";
 import { LoadingPage } from "../../../components/LoadingPage/LoadingPage";
 import { TransformationCard } from "../../../components/TransformationCard/TransformationCard";
+import audio from "../../../assets/characters.mp3";
+import { PlanetCard } from "../../../components/PlanetCard/PlanetCard";
 
 interface Planet {
     id: number;
@@ -59,11 +61,14 @@ export const Character = () => {
 
         oneCharacter();
     }, []);
-    console.log(character);
+
     if (isLoading) return <LoadingPage />;
     else
         return (
             <>
+                <audio className={styles.audio} autoPlay loop>
+                    <source src={audio} type="audio/mpeg" />
+                </audio>
                 <Header />
                 <div className={styles.mainContainer}>
                     {character != null ? (
@@ -88,7 +93,22 @@ export const Character = () => {
                                 <p className={styles.descriptionText}>{character.description}</p>
                             </div>
                             <div className={styles.planetAndTransformations}>
-                                <div className={styles.planet}></div>
+                                <div className={styles.planet}>
+                                    <h2 className={styles.planetTitulo}>Planeta Natal</h2>
+                                    {
+                                        character.originPlanet ? 
+                                        <PlanetCard 
+                                            key={character.originPlanet.id}
+                                            id={character.originPlanet.id}
+                                            name={character.originPlanet.name}
+                                            image={character.originPlanet.image}
+                                            description={character.originPlanet.description}
+                                            isDestroyed={character.originPlanet.isDestroyed}
+                                            deletedAt={character.originPlanet.deletedAt}
+                                        /> 
+                                        : ''
+                                    } 
+                                </div>
                                 <div className={styles.transformationsContainer}>
                                     {
                                         character.transformations && character.transformations.length > 0 ? 

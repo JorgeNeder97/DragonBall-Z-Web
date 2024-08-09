@@ -38,8 +38,6 @@ export const Characters = () => {
         allCharacters();
     }, []);
 
-    console.log(characters);
-
     if (isLoading) {
         return <LoadingPage />;
     } else

@@ -10,7 +10,7 @@ interface Props {
 
 export const TransformationCard = (props: Props) => {
     return (
-        <Link to={`/characters/${props.id}`} className={styles.mainContainer}>
+        <div className={styles.mainContainer}>
             <div className={styles.charName}>
                 <h4>{props.name}</h4>
             </div>
@@ -26,6 +26,6 @@ export const TransformationCard = (props: Props) => {
                     <p>Ki: {props.ki}</p>
                 </div>
             </div>
-        </Link>
+        </div>
     );
 };

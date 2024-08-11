@@ -52,6 +52,7 @@
 }
 
 @media (max-width: 900px) {
+    
     .link {
         font-size: var(--font-size-subheading);
     }

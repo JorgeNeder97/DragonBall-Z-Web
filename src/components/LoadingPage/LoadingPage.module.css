@@ -77,3 +77,18 @@
     letter-spacing: 1px;
     padding: 10px 34px;
 }
+
+@media (max-width: 900px) {
+
+    .mainContainer {
+        height: 100vh;
+    }
+
+    .logo {
+        width: 50vw;
+    }
+
+    .link {
+        font-size: var(--font-size-subheading);
+    }
+}

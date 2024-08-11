@@ -1,5 +1,4 @@
 import styles from "./TransformationCard.module.css";
-import { Link } from 'react-router-dom';
 
 interface Props {
     id: number;

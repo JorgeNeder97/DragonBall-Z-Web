@@ -1,5 +1,5 @@
+import { SoundInLink } from "../SoundInLink/SoundInLink";
 import styles from "./Card.module.css";
-import { Link } from 'react-router-dom';
 
 interface Props {
     affiliation: string;
@@ -16,7 +16,7 @@ interface Props {
 
 export const Card = (props: Props) => {
     return (
-        <Link to={`/characters/${props.id}`} className={styles.mainContainer}>
+        <SoundInLink to={`/characters/${props.id}`} className={styles.mainContainer}>
             <div className={styles.charName}>
                 <h4>{props.name}</h4>
             </div>
@@ -35,6 +35,6 @@ export const Card = (props: Props) => {
                     <p>Type: {props.affiliation}</p>
                 </div>
             </div>
-        </Link>
+        </SoundInLink>
     );
 };

@@ -1,0 +1,44 @@
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.mainContainer i {
+    /* color: #FFF; */
+    color: #3985f7;
+    text-shadow:
+        1.5px 1.5px 0 black,
+        -1.5px -1.5px 0 black,
+        1.5px -1.5px 0 black,
+        -1.5px 1.5px 0 black;
+}
+
+.mainContainer h3 {
+    font-family: 'Russo One', 'sans-serif';
+    /* color: #FFF; */
+    color: #3985f7;
+    text-shadow:
+        1.5px 1.5px 0 black,
+        -1.5px -1.5px 0 black,
+        1.5px -1.5px 0 black,
+        -1.5px 1.5px 0 black;
+    font-size: 1.5rem;
+}
+
+.mainContainer:hover i {
+    animation: shakeAnimation .6s infinite linear;
+}
+
+@keyframes shakeAnimation {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}

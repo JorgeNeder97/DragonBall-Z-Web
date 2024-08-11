@@ -101,3 +101,15 @@ a {
     letter-spacing: 1px;
     margin: 0;
 }
+
+@media (max-width: 900px) {
+    .mainContainer {
+        min-width: 300px;
+        max-width: 500px;
+    }
+
+    .charImageContainer {
+        min-width: 280px;
+        max-width: 480px;
+    }
+}

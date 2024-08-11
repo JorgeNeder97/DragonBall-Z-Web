@@ -40,7 +40,7 @@ export const Planets = () => {
                 </audio>
                 <Header />
                 <div className={styles.mainContainer}>
-                    <h2 className={styles.titulo}>Planets</h2>
+                    <h2 className={styles.titulo}>Planetas</h2>
                     <div className={styles.planetCardsContainer}>
                         {planets?.map(planet => (
                             <PlanetCard 

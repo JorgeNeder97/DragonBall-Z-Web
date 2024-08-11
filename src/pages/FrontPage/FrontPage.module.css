@@ -19,7 +19,7 @@
 }
 
 .logo {
-    width: 80vh;
+    width: 60vw;
     padding-bottom: 30px;
 }
 
@@ -76,4 +76,19 @@
 .link:hover {
     letter-spacing: 1px;
     padding: 10px 34px;
+}
+
+@media (max-width: 900px) {
+
+    .mainContainer {
+        height: 100vh;
+    }
+
+    .logo {
+        width: 50vw;
+    }
+
+    .link {
+        font-size: var(--font-size-subheading);
+    }
 }

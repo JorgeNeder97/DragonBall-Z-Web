@@ -3,10 +3,11 @@ import axios from "axios";
 import audio from "../../../assets/planets.mp3";
 import { Header } from "../../../components/Header/Header";
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { LoadingPage } from "../../../components/LoadingPage/LoadingPage";
 import { PlanetCard } from "../../../components/PlanetCard/PlanetCard";
 import { Card } from "../../../components/Card/Card";
+import { PiccoloButton } from "../../../components/PiccoloButton/PiccoloButton";
 
 interface Character {
     id: number;
@@ -59,7 +60,12 @@ export const Planet = () => {
                 </audio>
                 <Header />
                 <div className={styles.mainContainer}>
-                    <h2 className={styles.titulo}>Planeta</h2>
+                    <div className={styles.encabezado}>
+                        <h2 className={styles.titulo}>Planeta</h2>
+                        <div className={styles.volverAtrasContainer}>
+                            <PiccoloButton url={"/planets"} />
+                        </div>
+                    </div>
                     {
                         planet != null ?
                         <div className={styles.container}>
@@ -72,10 +78,13 @@ export const Planet = () => {
                                 description={planet.description}
                                 deletedAt={planet.deletedAt}
                             />
-                            <h3 className={styles.titulo}>Personajes de este planeta</h3>
+                            {
+                                planet.characters && planet.characters.length > 0 ?
+                                <h3 className={styles.titulo}>Personajes de este planeta</h3> :
+                                ''
+                            }
                             <div className={styles.charactersContainer}>
                                 {planet.characters.map(character => (
-                                    <Link to={`/characters/${character.id}`}>
                                         <Card 
                                             key={character.id}
                                             id={character.id}
@@ -89,7 +98,6 @@ export const Planet = () => {
                                             affiliation={character.affiliation}
                                             deletedAt={character.deletedAt}
                                         />
-                                    </Link>
                                 ))}
                             </div>
                         </div> 

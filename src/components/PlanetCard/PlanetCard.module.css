@@ -49,3 +49,37 @@
     line-height: 50px;
     margin-top: 30px;
 }
+
+
+@media (max-width: 900px) {
+
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .tituloImagen {
+        width: 100%;
+    }
+
+    .planetName {
+        width: 100%;
+        margin-top: 0;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+    .planetImage {
+        width: 100%;
+    }
+
+    .planetIsDestroyed {
+        text-align: center;
+    }
+
+    .planetDescription {
+        padding: 0 15px;
+    }
+}

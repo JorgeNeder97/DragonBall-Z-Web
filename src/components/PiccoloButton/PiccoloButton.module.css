@@ -1,0 +1,66 @@
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto {
+    opacity: 0;
+    transform: translateY(70%);
+    margin: 0;
+    color: #FFF;
+    text-shadow:
+        1.5px 1.5px 0 black,
+        -1.5px -1.5px 0 black,
+        1.5px -1.5px 0 black,
+        -1.5px 1.5px 0 black;
+    font-family: 'Russo One', 'sans-serif';
+    letter-spacing: 1px;
+    transition: .3s all ease;
+}
+
+.mainContainer:hover .texto {
+    opacity: 1;
+    transform:translateY(0);
+    transition: .3s all ease;
+}
+
+
+.gifContainer {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 70px;
+    transition: .3s all ease;
+}
+
+.staticImage {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.animatedImage {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.gifContainer:hover .staticImage {
+    display: none;
+    transition: .3s all ease;
+}
+
+.gifContainer:hover .animatedImage {
+    display: block;
+    transition: .3s all ease;
+}

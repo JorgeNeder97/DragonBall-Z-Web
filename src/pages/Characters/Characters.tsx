@@ -48,7 +48,7 @@ export const Characters = () => {
                 </audio>
                 <Header />
                 <div className={styles.mainContainer}>
-                    <h2 className={styles.titulo}>Characters</h2>
+                    <h2 className={styles.titulo}>Personajes</h2>
                     <div className={styles.cardsContainer}>
                         {characters?.map((character) => (
                             <Card 

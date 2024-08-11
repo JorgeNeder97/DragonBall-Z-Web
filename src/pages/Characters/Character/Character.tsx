@@ -8,6 +8,7 @@ import { LoadingPage } from "../../../components/LoadingPage/LoadingPage";
 import { TransformationCard } from "../../../components/TransformationCard/TransformationCard";
 import audio from "../../../assets/characters.mp3";
 import { PlanetCard } from "../../../components/PlanetCard/PlanetCard";
+import { VolverAtrasButton } from "../../../components/VolverAtrasButton/VolverAtrasButton";
 
 interface Planet {
     id: number;
@@ -89,7 +90,12 @@ export const Character = () => {
                                 />
                             </div>
                             <div className={styles.description}>
-                                <h2 className={styles.descriptionTitulo}>Descripción</h2>
+                                <div className={styles.descriptionTituloContainer}>
+                                    <h2 className={styles.descriptionTitulo}>Descripción</h2>
+                                    <div className={styles.volverAtrasContainer}>
+                                        <VolverAtrasButton url={'/characters'} />
+                                    </div>
+                                </div>
                                 <p className={styles.descriptionText}>{character.description}</p>
                             </div>
                             <div className={styles.planetAndTransformations}>
@@ -113,7 +119,8 @@ export const Character = () => {
                                     {
                                         character.transformations && character.transformations.length > 0 ? 
                                         <h2 className={styles.transformationsTitulo}>Transformaciones</h2> :
-                                        <h2 className={styles.transformationsTitulo}>No Tiene Transformaciones</h2>
+                                        ''
+                                        // <h2 className={styles.transformationsTitulo}>No Tiene Transformaciones</h2>
                                     }
                                     <div className={styles.transformations}>
                                         {character.transformations &&

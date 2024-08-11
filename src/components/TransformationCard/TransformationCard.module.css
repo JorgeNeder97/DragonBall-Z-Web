@@ -97,3 +97,14 @@ a {
     letter-spacing: 1px;
     margin: 0;
 }
+
+
+@media (max-width: 900px) {
+    .mainContainer {
+        width: 300px;
+    }
+
+    .charImageContainer {
+        width: 280px;
+    }
+}

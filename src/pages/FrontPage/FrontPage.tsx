@@ -1,6 +1,6 @@
 import styles from './FrontPage.module.css';
-import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
+import { SoundInLink } from '../../components/SoundInLink/SoundInLink';
 
 
 
@@ -9,7 +9,7 @@ export const FrontPage = () => {
         <>
             <div className={styles.mainContainer}>
                 <img src={logo} alt="Dragon Ball Z" className={styles.logo} />
-                <Link to="/home" className={styles.link}>INGRESAR</Link>
+                <SoundInLink to="/home" className={styles.link}>INGRESAR</SoundInLink>
             </div>
         </>
     )

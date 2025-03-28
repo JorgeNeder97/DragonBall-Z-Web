@@ -7,7 +7,8 @@
 }
 
 .mainContainer {
-    min-height: 80vh;
+    min-height: 100vh;
+    height: 100%;
     display: flex;
     background: #ff5e00;
     flex-direction: column;

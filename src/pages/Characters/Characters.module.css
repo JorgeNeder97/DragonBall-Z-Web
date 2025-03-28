@@ -13,7 +13,7 @@
 .mainContainer {
     width: 100%;
     min-height: 50vh;
-    background: url('/background.png');
+    background-color: #FBCB33;
     background-size: cover;
     background-attachment: fixed;
     display: flex;

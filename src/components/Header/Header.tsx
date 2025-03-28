@@ -1,6 +1,6 @@
 import styles from './Header.module.css';
 import { NavBar } from '../NavBar/NavBar';
-import Wallpaper from '../../assets/headerIMG.png'
+import Wallpaper from '../../assets/headerIMG.webp'
 import { SoundOutLink } from '../SoundOutLink/SoundOutLink';
 
 
